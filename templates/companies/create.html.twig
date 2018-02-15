@@ -1,0 +1,23 @@
+{% extends 'layouts/inside.html.twig' %}
+
+{% block sidebar %}
+    {% include 'inc/_nav-companies.html.twig' %}
+{% endblock %}
+
+{% block content %}
+
+    <h3 class="border-bottom pb-2 mb-3">Add company</h3>
+
+    <div class="rounded box-shadow my-3 p-3 bg-white">
+        <h6 class="border-bottom border-gray pb-2 mb-0">Add company</h6>
+
+        <div class="mt-3">
+            {{ form_start(companyForm) }}
+            {{ form_widget(companyForm) }}
+
+            <button class="btn btn-primary" type="submit">Save</button>
+            {{ form_end(companyForm) }}
+        </div>
+    </div>
+
+{% endblock %}
